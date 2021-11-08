@@ -13,9 +13,9 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  
   final messageTextController = TextEditingController();
   final _auth = FirebaseAuth.instance;
-
   late String messageText;
 
   @override
@@ -112,7 +112,6 @@ class MessageStream extends StatelessWidget {
         }
         return Expanded(
           child: ListView.builder(
-            //reverse: true,
             scrollDirection: Axis.vertical,
             shrinkWrap: true,
             itemCount: snapshot.data!.docs.length,
